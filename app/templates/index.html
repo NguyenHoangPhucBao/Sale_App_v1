@@ -1,18 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ</title>
-    <link rel="stylesheet" href="{{url_for("static", filename = "css/style.css")}}">
-</head>
-<body>
-    <h1 class="subject">BÁN HÀNG TRỰC TUYẾN</h1>
-    <ul>
-        <li><a href="{{ url_for("show_products") }}">Tất cả</a></li>
-        {% for c in categories %}
-        <li><a href="{{ url_for("show_products") }}?category_id={{c.id}}">{{c.name}}</a></li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends "layout/base.html" %}
