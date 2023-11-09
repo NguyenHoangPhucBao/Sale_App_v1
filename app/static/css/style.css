@@ -15,25 +15,6 @@ nav{
   background-color: #a7d660;
 }
 
-
-.flex-container{
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin: 0 auto;
-  justify-content: center;
-}
-
-.flex-container>div{
-  text-align: center;
-}
-
-
-div.card{
-  width:12rem;
-  height: 20%;
-}
-
 #button-addon1 {
   color: #ffc371;
 }

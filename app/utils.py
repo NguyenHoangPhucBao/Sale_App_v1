@@ -1,4 +1,4 @@
-from model import Category, Products
+from model import Category, Products, User
 
 
 def load_categories():
@@ -21,3 +21,9 @@ def load_products(cate_id=None, kw=None, start_price=None, end_price=None):
         products = Products.query.filter(Products.price.__lt__(end_price))
 
     return products
+
+
+def get_user_by_id(user_id):
+    return User.query.get(user_id)
+
+

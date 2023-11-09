@@ -1,15 +1,23 @@
 {% extends "layout/base.html" %}
 
 {% block body %}
-<div class="flex-container">
-    {% for p in products %}
-    <div class="card" >
-      <img src="{{ url_for("static", filename = p.image) }}" class="card-img-top" alt="{{p.name}}" height="150">
-      <div class="card-body">
-        <h7 class="card-title">{{p.name}}</h7>
-        <a href="{{ url_for("product_detail", product_id = p.id) }}" class="btn btn-primary">Details</a>
-      </div>
+<div class="container">
+    <div class="row">
+        {% for p in products %}
+        <div class="col-md-3 col-sm-4" style="padding: 10px">
+            <div class="card">
+              <img class="card-img-top" src="{{ url_for("static", filename = p.image) }}"  alt="{{p.name}}">
+              <div class="card-body">
+                <h6 class="card-title">{{p.name}}</h6>
+                <p class="card-text">{{p.description}}</p>
+                <a href="{{ url_for("product_detail", product_id = p.id) }}" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-    </div>
+</div>
+
+
+
 {% endblock %}
